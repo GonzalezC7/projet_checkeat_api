@@ -38,10 +38,8 @@ class OrderedController extends Controller
             ["id", $id]
         ])->firstOrFail();
 
-        $ordered->price = $request->price;
-        $ordered->name = $request->name;
+
         $ordered->status = $request->status;
-        $ordered->total = $request->total;
 
 
         $ordered->save();
