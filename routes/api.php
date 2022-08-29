@@ -43,7 +43,7 @@ Route::middleware('auth:sanctum')->post('/menu', [MenuController::class, 'store'
 Route::middleware('auth:sanctum')->get('/menu/{id}', [MenuController::class, 'index'])->name("menu.index");
 
 Route::middleware('auth:sanctum')->put('/menu', [MenuController::class, 'update'])->name("menu.update");
-Route::middleware('auth:sanctum')->delete('/menu', [MenuController::class, 'destroy'])->name("menu.destroy");
+Route::middleware('auth:sanctum')->delete('/menu/{id}', [MenuController::class, 'destroy'])->name("menu.destroy");
 
 // Création route pour afficher les restaurants en tant que client(s)
 
