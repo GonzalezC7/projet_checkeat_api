@@ -23,6 +23,7 @@ class RestaurateurController extends Controller
             'email' => 'required|string',
             'phone' => 'required|string',
             'password' => 'required|string',
+
         ]);
 
         $restaurateur = Restaurateur::create([

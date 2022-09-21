@@ -46,4 +46,19 @@ class OrderedController extends Controller
 
         return response()->json(['oredered' => $ordered]);
     }
+
+    public function orderedpayment($id_command)
+    {
+        $orderedPayment = Ordered::where([
+            ["id_command", $id_command]
+        ])->get();
+
+
+
+
+
+
+
+        return response()->json(['orderedpayment' => $orderedPayment]);
+    }
 }
